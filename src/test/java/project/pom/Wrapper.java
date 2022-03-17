@@ -27,6 +27,10 @@ public class Wrapper {
 		return driver.findElement(locator);
 	}
 	
+	public String getText(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
 	public void setText(String textInput, By locator) {
 		driver.findElement(locator).sendKeys(textInput);
 	}

@@ -29,6 +29,9 @@ public class AmazonTest {
 	public void test() throws InterruptedException {
 		amazonPage.changeCountry();
 		amazonPage.searchProductToBuy();
+		String checkoutResult = amazonPage.getCheckoutText();
+		amazonPage.sleep(2000L);
+		assertEquals("Proceder al pago", checkoutResult);
 	}
 	
 	@After
